@@ -34,7 +34,7 @@ function pesquisar() {
                         <a href="#" target="_blank">${dado.titulo}</a>
                     </h2>
                     <p class="descricao-meta">${dado.descricao}</p>
-                    <a href=${dado.link} target="_blank">Mais informações</a>
+                    <a href=${dado.link} target="_blank">ver episódio</a>
                 </div>
             </div>
             `;
@@ -43,12 +43,6 @@ function pesquisar() {
 
     if (!resultados) {
         resultados = "<p>Nada foi encontrado. Você precisa digitar o nome de um desenho ou alguma coisa que lembre dele</p>"
-    }
-
-    // Atribui os resultados gerados à seção HTML
-    section.innerHTML = resultados;
-}
-        `;
     }
 
     // Atribui os resultados gerados à seção HTML
