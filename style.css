@@ -1,22 +1,19 @@
 /* Importa a fonte Chakra Petch do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @font-face {
-    font-family: 'Sunshine Tropical';
-    src: url('fontes/Sunshine Tropical.ttf') format('truetype');
+    font-family: 'Brice\ Regular\ SemiExpanded';
+    src: url('fontes/Brice\ Regular\ SemiExpanded.otf') format('truetype');
   }
   
 /* Estiliza o corpo da página */
 body {
     background-image: url(imagens/Design\ sem\ nome\ \(3\).png);  /* Define a imagem de fundo */
-    background-size:100%; /*tamanho da imagem do background*/
+    background-size:130%; /*tamanho da imagem do background*/
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: weight;
+    font-weight: 600;
     font-style: normal;
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Alinha os itens na vertical */
@@ -27,31 +24,38 @@ body {
     padding: 0;
 }
 
-/* Estiliza os títulos h1 */
-h1 {
-    margin-top: 10.5rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: bolder;
-    font-style:normal;
-    font-size: 4.5rem; /* Tamanho da fonte */
-    color: #010153; /* Cor do texto */
-    text-align: center; /* Alinha o texto ao centro */
-    letter-spacing: 0rem; /* Espaçamento entre letras */
-}
-
-h2{
-    text-align: center;
-}
-
 header{
-    background: #6d8efa; /* Cor de fundo dos itens */
+    width: 100%;
+    background: #1b0164; /* Cor de fundo dos itens */
     border-radius: 0.6rem; /* Borda arredondada */
     padding: 1rem; /* Espaçamento interno */
-    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
-    margin-left: 20rem; /* Espaçamento esquerdo dos itens */
+    margin-left: 18rem; /* Espaçamento esquerdo dos itens */
     margin-right: 20rem; /* Espaçamento direito dos itens */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    margin-top: 5rem;
+    margin-top: 15rem; /* Espaçamento topo dos itens */
+}
+
+/* Estiliza os títulos h1 */
+h1 {
+    font-family: "Brice\ Regular\ SemiExpanded"; /* Estilo da fonte */
+    font-weight: bolder; /* Espessura da Fonte */
+    font-style:normal; /* Estilo da fonte */
+    font-size: 8rem; /* Tamanho da fonte */
+    text-align: center; /* Alinha o texto ao centro */
+    color: #f8f8f8; /* Cor do texto */
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+/* Estiliza o h2 do topo da página */
+h2{
+    text-align: center; /* centralizar texto  */
+    color: #ffc9f6; /* cor do texto */
+}
+
+p {
+    color: #ffc9f6; /* cor do texto */
+    background-color: #1b0164;
+    
 }
 
 /* Estiliza as seções da página */
@@ -70,22 +74,31 @@ section input {
     padding: 1rem; /* Espaçamento interno */
     border-radius: 1.5rem; /* Borda arredondada */
     margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
-    color: #ffffff; /* Cor do texto */
+    color: #000000; /* Cor do texto */
     font-size: 1rem; /* Tamanho da fonte */
     box-sizing: border-box; /* Inclui padding e border na largura total */
 }
 
 /* Estiliza os botões dentro das seções */
 section button {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
     padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
     border-radius: 1.5rem; /* Borda arredondada */
-    background-color: #040550; /* Cor de fundo do botão */
+    background-color: #1b0164; /* Cor de fundo do botão */
     color: #F5F7F8; /* Cor do texto do botão */
     font-size: 1rem; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
-}
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        font-weight: 600;
+        transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+        background-color: #ee05a0; /* Muda a cor de fundo */
+        box-shadow: 0px 5px 10px rgba(66, 6, 6, 0.2); /* Adiciona uma sombra */
+        color: #1b0164; /* Cor do texto */
+      }
+    }
 
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
@@ -103,19 +116,24 @@ section button {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 1rem;
     background: #FFFFFF; /* Cor de fundo dos itens */
+    opacity: 90%;
     border-radius: 0.6rem; /* Borda arredondada */
     padding: 1rem; /* Espaçamento interno */
     margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
 }
 
+.item-resultado p{
+    background: #FFFFFF; /* Cor de fundo dos itens */
+}
+
 .item-resultado img{
     margin-right: 1rem;
     width:fit-content;
-    height: 20rem;
+    height: 15rem;
     border-radius: 0.6rem; /* Borda arredondada */
     object-fit: cover;
     margin-right: 1rem;
@@ -147,8 +165,8 @@ section button {
 
 /* Estiliza o rodapé da página */
 footer {
-    background-color: #102c3a; /* Cor de fundo do rodapé */
-    color: #e2e2e2; /* Cor do texto */
+    background-color: #1b0164; /* Cor de fundo do rodapé */
+    color: #d38cc7; /* Cor do texto */
     text-align: center; /* Alinha o texto ao centro */
     padding: 0; /* Espaçamento interno */
     width: 100%; /* Largura total da página */
